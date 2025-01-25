@@ -5,6 +5,7 @@ const {
   getTasks,
   getTaskById,
   updateTask,
+  // deleteTask,
   toggleTaskStatus
 } = require("../controllers/taskController");
 const router = express.Router();
@@ -16,5 +17,6 @@ router.get("/tasks/create", ensureAuthenticated, (req, res) => {
 });
 router.post("/tasks", ensureAuthenticated, createTask);
 router.put("/tasks/:id", ensureAuthenticated, updateTask);
+// router.delete("/tasks/:id/delete", ensureAuthenticated, deleteTask);
 router.post("/tasks/:id/toggle", ensureAuthenticated, toggleTaskStatus);
 module.exports = router;

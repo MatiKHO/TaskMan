@@ -1,6 +1,6 @@
 <h1>Edit</h1>
 
-<form action="/api/tasks/{{id}}" method="POST">
+<form action="/api/tasks/{{id}}?_method=PUT" method="POST">
 
   <label for="title">Título de la tarea:</label>
   <input type="text" name="title" id="title" value="{{task.title}}" required /><br />
