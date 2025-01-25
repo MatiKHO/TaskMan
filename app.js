@@ -5,6 +5,8 @@ const { create } = require("express-handlebars");
 const dotenv = require("dotenv");
 const session = require('express-session');
 const flash = require('connect-flash');
+const methodOverride = require('method-override');
+
 const authRoutes = require('./routes/authRoutes');
 const taskRoutes = require('./routes/taskRoutes');
 dotenv.config();
@@ -33,6 +35,7 @@ app.use(session({
 }));
 
 app.use(flash());
+app.use(methodOverride('_method'));
 
 require('./config/passport')(passport);
 app.use(passport.initialize());

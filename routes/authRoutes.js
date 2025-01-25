@@ -49,7 +49,7 @@ router.get('/logout', (req, res) => {
         return res.redirect('/api/home');
     }
     req.flash('success_msg', 'Sesión cerrada exitosamente');
-    res.redirect('/');
+    res.redirect('/api/login');
     });
 });
 

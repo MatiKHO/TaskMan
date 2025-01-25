@@ -71,19 +71,24 @@ const updateTask = async (req, res) => {
     }
 };
 
-const deleteTask = async (req, res) => {
-    const { id } = req.params;
-    console.log(id);
-    try {
-        await prisma.task.delete({
-            where: { id: parseInt(id) },
-        });
-        res.redirect('/api/tasks');
-    } catch (error) {
-        console.error(error);
-        res.status(500).json({ error: 'Error al eliminar la tarea' });
-    }
-};
+// const deleteTask = async (req, res) => {
+//     const { id } = req.params;
+//     try {
+//         const task = await prisma.task.findUnique({
+//             where: { id: parseInt(id) },
+//         });
+//         if (!task) {
+//             return res.status(404).json({ error: 'Tarea no encontrada' });
+//         }
+//         await prisma.task.delete({
+//             where: { id: parseInt(id) },
+//         });
+//         res.redirect('/api/tasks');
+//     } catch (error) {
+//         console.error(error);
+//         res.status(500).json({ error: 'Error al eliminar la tarea' });
+//     }
+// };
 
 const toggleTaskStatus = async (req, res) => {
     const { id } = req.params;
@@ -115,6 +120,6 @@ module.exports = {
     getTasks,
     getTaskById,
     updateTask,
-    deleteTask,
+    // deleteTask,
     toggleTaskStatus,
 };

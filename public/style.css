@@ -9,7 +9,7 @@ body {
 
 /* Estilos para el encabezado */
 header {
-  background-color: #026aa7;
+  background-color:#012f50;
   color: white;
   padding: 10px 20px;
   text-align: center;
@@ -25,7 +25,13 @@ nav a {
 }
 
 nav a:hover {
-  text-decoration: underline;
+  text-decoration: none;
+  font-size: large;
+}
+
+a {
+  color: white;
+  text-decoration: none;
 }
 
 /* Estilos para el contenedor principal */
@@ -35,7 +41,7 @@ main {
 }
 
 /* Estilos para los encabezados h1 */
-h1, h2, a {
+h1, h2, p {
   color: white;
   text-align: center;
 }
@@ -66,9 +72,20 @@ form button:hover {
   background-color: #005a9c;
 }
 
- a {
+ .create a {
   text-decoration: none;
-  color: #ebecf0;
+  color:#012f50;
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.create a:hover {
+  font-size: large;
+}
+
+.username {
+  color:#012f50 ;
 }
 
 /* Estilos para las listas de tareas */
