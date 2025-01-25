@@ -63,8 +63,6 @@ const updateTask = async (req, res) => {
                 dueDate: new Date(dueDate),
                 completed: completed === 'on',
             },
-       
-        
         });
         res.redirect('/api/tasks');
     } catch (error) {
