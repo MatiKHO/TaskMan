@@ -1,0 +1,18 @@
+<h1>Edit</h1>
+
+<form action="/api/tasks/{{id}}" method="POST">
+
+  <label for="title">Título de la tarea:</label>
+  <input type="text" name="title" id="title" value="{{task.title}}" required /><br />
+
+  <label for="description">Descripción</label>
+  <textarea name="description" id="description" required>{{task.description}}</textarea><br />
+
+  <div>
+    <label for="dueDate">Fecha de vencimiento:</label>
+    <input type="date" id="dueDate" name="dueDate"  value="{{task.dueDate}}" required />
+  </div>
+
+  <button type="submit">Actualizar tarea</button>
+
+</form>

@@ -1,0 +1,18 @@
+<h1>Nueva tarea</h1>
+
+<form action="/api/tasks" method="POST">
+
+  <label for="title">Título de la tarea:</label>
+  <input type="text" name="title" id="title" required /><br />
+
+  <label for="description">Descripción</label>
+  <textarea name="description" id="description" required></textarea><br />
+
+  <div>
+    <label for="dueDate">Fecha de vencimiento:</label>
+    <input type="date" id="dueDate" name="dueDate" required />
+  </div>
+
+  <button type="submit">Crear tarea</button>
+
+</form>

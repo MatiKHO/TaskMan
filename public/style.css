@@ -1,0 +1,115 @@
+/* Estilos para el cuerpo de la página */
+body {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  background-color: #0079bf;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+/* Estilos para el encabezado */
+header {
+  background-color: #026aa7;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para la navegación */
+nav a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Estilos para el contenedor principal */
+main {
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Estilos para los encabezados h1 */
+h1, h2, a {
+  color: white;
+  text-align: center;
+}
+
+/* Estilos para el formulario */
+form {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+form label, form input, form textarea, form button {
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 10px;
+}
+
+form button {
+  background-color: #026aa7;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #005a9c;
+}
+
+ a {
+  text-decoration: none;
+  color: #ebecf0;
+}
+
+/* Estilos para las listas de tareas */
+.task-list {
+  background-color: #ebecf0;
+  border-radius: 3px;
+  width: 300px;
+  margin: 0 10px;
+  padding: 10px;
+  box-shadow: 0 1px 0 rgba(9, 30, 66, 0.25);
+}
+
+/* Estilos para los encabezados de las listas */
+.task-list h2 {
+  font-size: 16px;
+  margin: 0 0 10px;
+  padding: 0 10px;
+  color: #333;
+}
+
+/* Estilos para las tarjetas de tareas */
+.task-card {
+  background-color: white;
+  border-radius: 3px;
+  margin: 0 0 10px;
+  padding: 10px;
+  box-shadow: 0 1px 0 rgba(9, 30, 66, 0.25);
+  cursor: pointer;
+}
+
+.task-card:hover {
+  background-color: #f4f5f7;
+}
+
+/* Estilos para el pie de página */
+footer {
+  background-color: #026aa7;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}

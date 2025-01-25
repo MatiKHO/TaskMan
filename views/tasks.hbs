@@ -1,0 +1,16 @@
+<h1>Tareas</h1>
+
+<ul>
+    {{#each tasks}}
+    <li>
+        {{title}} - {{description}} - {{dueDate}} - {{#if completed}}Completada{{else}}Pendiente{{/if}}
+        <a href="/api/tasks/{{id}}/edit">Editar</a> |
+        <a href=" /api/tasks/{{id}}/delete">Eliminar</a>
+         <form action="/api/tasks/{{id}}/toggle" method="POST" style="display:inline;">
+            <button type="submit">{{#if completed}}Marcar como Pendiente{{else}}Marcar como Completada{{/if}}</button>
+        </form>
+    </li>
+    {{/each}}
+</ul>
+
+<a href="/api/tasks/create">Crear nueva tarea</a>
