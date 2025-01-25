@@ -5,9 +5,11 @@
     <li>
         {{title}} - {{description}} - {{dueDate}} - {{#if completed}}Completada{{else}}Pendiente{{/if}}
         <a href="/api/tasks/{{id}}/edit">Editar</a> |
-        {{!-- <a href="/api/tasks/{{id}}/delete">Eliminar</a> --}}
          <form action="/api/tasks/{{id}}/toggle" method="POST" style="display:inline;">
             <button type="submit">{{#if completed}}Marcar como Pendiente{{else}}Marcar como Completada{{/if}}</button>
+        </form>
+        <form action="/api/tasks/{{id}}?_method=DELETE" method="POST" style="display:inline;">
+            <button type="submit">Eliminar</button>
         </form>
     </li>
     {{/each}}
